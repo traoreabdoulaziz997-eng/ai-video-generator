@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Générateur de vidéos IA</title>
+</head>
+
+<body>
+
+    <h1>🎬 Générateur de vidéos IA</h1>
+
+    <p>
+        Décris la vidéo que tu souhaites créer :
+    </p>
+
+    <textarea
+        id="prompt"
+        placeholder="Exemple : Une ville futuriste la nuit, vue depuis le ciel..."
+        rows="6"
+        cols="40">
+    </textarea>
+
+    <br><br>
+
+    <button onclick="genererVideo()">
+        🎬 Générer la vidéo
+    </button>
+
+    <p id="statut"></p>
+
+    <script>
+
+        function genererVideo() {
+
+            const prompt =
+                document.getElementById("prompt").value;
+
+            if (!prompt) {
+
+                document.getElementById("statut").innerText =
+                    "⚠️ Écris d'abord une description.";
+
+                return;
+            }
+
+            document.getElementById("statut").innerText =
+                "🤖 Préparation de ta vidéo...";
+        }
+
+    </script>
+
+</body>
+</html>
