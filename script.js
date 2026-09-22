@@ -1,17 +1,37 @@
-function genererVideo() {
+const bouton = document.getElementById("generer");
+const champPrompt = document.getElementById("prompt");
+const champStyle = document.getElementById("style");
+const champFormat = document.getElementById("format");
+const champDuree = document.getElementById("duree");
+const statut = document.getElementById("statut");
+const resume = document.getElementById("resume");
+const details = document.getElementById("details");
 
-    const prompt = document.getElementById("prompt").value;
-    const statut = document.getElementById("statut");
+bouton.addEventListener("click", function () {
 
-    if (!prompt.trim()) {
+    const prompt = champPrompt.value.trim();
+    const style = champStyle.value;
+    const format = champFormat.value;
+    const duree = champDuree.value;
 
-        statut.innerText =
-            "⚠️ Décris d'abord la vidéo que tu souhaites créer.";
+    if (prompt.length < 5) {
+
+        statut.textContent =
+            "⚠️ Écris une description d'au moins 5 caractères.";
+
+        resume.hidden = true;
 
         return;
     }
 
-    statut.innerText =
-        "🤖 Préparation de ta vidéo IA...";
+    details.textContent =
+        "Description : " + prompt +
+        " | Style : " + style +
+        " | Format : " + format +
+        " | Durée : " + duree + " secondes.";
 
-}
+    resume.hidden = false;
+
+    statut.textContent =
+        "✅ Ta demande est préparée. La connexion au service vidéo IA reste à effectuer.";
+});
