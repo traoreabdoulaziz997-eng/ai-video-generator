@@ -1,17 +1,10 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
-
     <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
-    <title>Générateur de vidéos IA</title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AfriNova AI Video</title>
     <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
@@ -20,29 +13,82 @@
 
         <section class="carte">
 
-            <h1>🎬 Générateur de vidéos IA</h1>
+            <h1>🎬 AfriNova AI Video</h1>
 
             <p class="description">
-                Décris la vidéo que tu souhaites créer.
+                Transforme tes idées en projets vidéo grâce à l'intelligence artificielle.
             </p>
+
+            <label for="prompt">
+                Description de la vidéo
+            </label>
 
             <textarea
                 id="prompt"
-                placeholder="Exemple : Une ville futuriste la nuit, vue depuis le ciel...">
-            </textarea>
+                placeholder="Exemple : Une vue cinématique d'Abidjan au coucher du soleil..."
+                rows="6"></textarea>
 
-            <button onclick="genererVideo()">
-                🎬 Générer la vidéo
+
+            <label for="style">
+                Style vidéo
+            </label>
+
+            <select id="style">
+                <option value="realiste">Réaliste</option>
+                <option value="cinematique">Cinématique</option>
+                <option value="anime">Anime</option>
+                <option value="3d">Animation 3D</option>
+                <option value="documentaire">Documentaire</option>
+            </select>
+
+
+            <label for="format">
+                Format
+            </label>
+
+            <select id="format">
+                <option value="16:9">16:9 — Paysage</option>
+                <option value="9:16">9:16 — Vertical (TikTok)</option>
+                <option value="1:1">1:1 — Carré</option>
+            </select>
+
+
+            <label for="duree">
+                Durée souhaitée
+            </label>
+
+            <select id="duree">
+                <option value="5">5 secondes</option>
+                <option value="10">10 secondes</option>
+                <option value="15">15 secondes</option>
+                <option value="30">30 secondes</option>
+            </select>
+
+
+            <button id="generer">
+                🎬 Préparer ma vidéo
             </button>
 
-            <p id="statut"></p>
+
+            <p id="statut" role="status"></p>
+
+
+            <section id="resume" hidden>
+
+                <h2>
+                    Résumé de ta demande
+                </h2>
+
+                <p id="details"></p>
+
+            </section>
 
         </section>
 
     </main>
 
+
     <script src="script.js"></script>
 
 </body>
-
 </html>
