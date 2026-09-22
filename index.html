@@ -1,56 +1,48 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
+
     <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
     <title>Générateur de vidéos IA</title>
+
+    <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
-    <h1>🎬 Générateur de vidéos IA</h1>
+    <main class="conteneur">
 
-    <p>
-        Décris la vidéo que tu souhaites créer :
-    </p>
+        <section class="carte">
 
-    <textarea
-        id="prompt"
-        placeholder="Exemple : Une ville futuriste la nuit, vue depuis le ciel..."
-        rows="6"
-        cols="40">
-    </textarea>
+            <h1>🎬 Générateur de vidéos IA</h1>
 
-    <br><br>
+            <p class="description">
+                Décris la vidéo que tu souhaites créer.
+            </p>
 
-    <button onclick="genererVideo()">
-        🎬 Générer la vidéo
-    </button>
+            <textarea
+                id="prompt"
+                placeholder="Exemple : Une ville futuriste la nuit, vue depuis le ciel...">
+            </textarea>
 
-    <p id="statut"></p>
+            <button onclick="genererVideo()">
+                🎬 Générer la vidéo
+            </button>
 
-    <script>
+            <p id="statut"></p>
 
-        function genererVideo() {
+        </section>
 
-            const prompt =
-                document.getElementById("prompt").value;
+    </main>
 
-            if (!prompt) {
-
-                document.getElementById("statut").innerText =
-                    "⚠️ Écris d'abord une description.";
-
-                return;
-            }
-
-            document.getElementById("statut").innerText =
-                "🤖 Préparation de ta vidéo...";
-        }
-
-    </script>
+    <script src="script.js"></script>
 
 </body>
+
 </html>
