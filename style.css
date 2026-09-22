@@ -1,3 +1,4 @@
+
 * {
     box-sizing: border-box;
 }
@@ -5,60 +6,89 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #f4f6f8;
-    color: #222;
+    background: #10131c;
+    color: #f5f5f5;
 }
 
 .conteneur {
-    max-width: 900px;
-    margin: 50px auto;
-    padding: 30px;
+    max-width: 760px;
+    margin: 30px auto;
+    padding: 20px;
 }
 
 .carte {
-    background: white;
-    padding: 30px;
+    background: #1b2030;
+    padding: 28px;
+    border: 1px solid #343b50;
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
 h1 {
     text-align: center;
+    color: #a8c7ff;
 }
 
 .description {
     text-align: center;
-    color: #666;
+    color: #c0c5d3;
+    line-height: 1.6;
+}
+
+label {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+textarea,
+select {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #454d63;
+    border-radius: 10px;
+    background: #111522;
+    color: white;
+    font-size: 16px;
 }
 
 textarea {
-    width: 100%;
-    min-height: 180px;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 12px;
     resize: vertical;
-    font-size: 16px;
+    min-height: 150px;
 }
 
 button {
     width: 100%;
-    margin-top: 15px;
-    padding: 15px;
+    margin-top: 24px;
+    padding: 16px;
     border: none;
     border-radius: 12px;
-    background: #111;
+    background: #527cff;
     color: white;
-    font-size: 16px;
+    font-size: 17px;
+    font-weight: bold;
     cursor: pointer;
 }
 
 button:hover {
-    opacity: 0.85;
+    opacity: 0.9;
 }
 
 #statut {
     margin-top: 20px;
     text-align: center;
-    font-weight: bold;
+    line-height: 1.5;
+}
+
+#resume {
+    margin-top: 24px;
+    padding: 18px;
+    background: #111522;
+    border-radius: 12px;
+    overflow-wrap: anywhere;
+}
+
+#resume h2 {
+    color: #a8c7ff;
 }
